@@ -38,9 +38,8 @@ Thirty-six classifiers were developed, using the Catboost algorithm. The lower m
 
 
 
-## Prerequisites
+## Prerrequisitos
 
-To install the flask app, you need:
 
 * python3
 * python packages in the requirements.txt file
@@ -49,5 +48,4 @@ Install the packages with
 
 * pip install -r requirements.txt
 
-## Acknowledgements
-Thanks to Davivienda to support me through this course
+
