@@ -25,7 +25,7 @@ El modelo con mejor desempeño fue el Xgboost para ambos casos, a continuación 
 ![plot](./imgs/resultados_modelo1_test.PNG)
 
 **Modelo 2: Cluster 2**
-![plot](./mgs/resultados_modelo2_test.PNG)
+![plot](./imgs/resultados_modelo2_test.PNG)
 
 
 ## Prerrequisitos
