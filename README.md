@@ -1,6 +1,6 @@
-# Disaster Response Pipeline Project
+# Análisis del incumplimiento de pago: Tarjetas de crédito
 
-In this project, an application was built to classify messages given by the user in one of the 36 categories. The algorithms used are Catboots, the metric used to evaluate each model was the AUC. On the other hand, it was found that some of the classes were too unbalanced, so to avoid overfitting in these algorithms, balancing techniques were used, in this case SMOTE.
+En objetivo de este proyecto es predecir la probabilidad de incumplimiento de una determinada obligación, en este caso tarjetas de crédito. Esto permitirá generar estrategias que minimicen el riesgo del deterioro de la salud financiera del cliente. Adicionalmente, con el fin de facilititar el desarrollo de las estrategias de cobranzas, se plantea emplear algoritmos de clusterización que permitan encontrar segmentos homogenéos dentro de la población y de esta manera dar un trato diferencial a cada cliente.
 
 ## Link para la aplicacion web https://defaultappnataliacastilla.herokuapp.com/
 ![plot](./imgs/web_app.PNG)
