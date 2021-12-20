@@ -15,27 +15,17 @@ En este repositorio encontrarás todo lo necesario para reproducir mi trabajo
 * imgs: Se encuentran todas las imágenes realizadas tanto en la exploración, preprocesamiento y clusterización
 * data: Fuente de datos empleada: https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients
 
-## Model and results
+## Modelos y resultados
 
-Thirty-six classifiers were developed, using the Catboost algorithm. The lower metric was 0.70 
- and the upper metric was 0.93 AUC. You can check the results running the models (Please see the instructions).
+Para seleccionar el modelo, para cada cluster, entrenamos 4 modelos diferentes de clasificación binaria: SVM, XGB, KNN, NB (Cada uno de naturaleza diferente). Para garantizar el desempeño de cada uno se empleó K-fold en el cual particionamos los datos 10 veces. De esta manera obtenemos una lista de scores de los cuales podemos obtener algunas estadísticas básicas: desviación estándar, media, promedio; La métricas empleadas para la evaluación en cada Fold fueron: AUC, F1-Score y Acuraccy. Para balancear los datos empleamos SMOTE-TOMEK el cual crea una muestra artificial según los vecinos más cercanos de cada punto.
 
-### Instructions:
+El modelo con mejor desempeño fue el Xgboost para ambos casos, a continuación se muestra un resumen de las métricas obtenidas
+**Modelo 1: Cluster 1**
 
-1. Run the following commands in the project's root directory to set up your database and model.
+![plot](./imgs/resultados_modelo1_test.PNG)
 
-    - To run ETL pipeline that cleans data and stores in database
-        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
-    - To run ML pipeline that trains classifier and saves
-        `python models/train_classifier.py data/DisasterResponse.db models/models_clfs/ models/glove.6B.50d.txt`
-    - *Please uncompress the file with glove embedding to running the models*
- 
- 
-2. Run the following command in the app's directory to run your web app.
-    `python app/run.py` or python/disaster_response_app.py
-
-3. Go to http://0.0.0.0:3001/
-
+**Modelo 2: Cluster 2**
+![plot](./mgs/resultados_modelo2_test.PNG)
 
 
 ## Prerrequisitos
@@ -44,7 +34,7 @@ Thirty-six classifiers were developed, using the Catboost algorithm. The lower m
 * python3
 * python packages in the requirements.txt file
 
-Install the packages with
+Instala los paquetes con:
 
 * pip install -r requirements.txt
 
